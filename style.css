@@ -34,6 +34,7 @@ main{
 main .left{
   width: 230px;
   height: calc(100% - 90px);
+  min-height: 308px;
   background-color: rgba(0,0,0,.8);
   position: fixed;
   left:0;
@@ -79,9 +80,12 @@ main .left menu .item img{
 
 /* ascloltati di recente */
 
-main .left .recenti{
-  opacity: .6;
+main .left .recenti {
   padding-left: 24px;
+}
+
+main .left .recenti *{
+  opacity: 0.6;
 }
 
 main .left .recenti h3{
@@ -90,18 +94,34 @@ main .left .recenti h3{
   letter-spacing: 1px ;
 }
 
-main .left .recenti a:hover{
+main .left .recenti a:hover span{
   opacity: 1;
 }
 
 /* profilo */
-main .left .profilo a {
-  height: 30px;
+
+main .left .profilo .download{
   border-bottom: 1px solid rgba(255,255,255,.4);
+
 }
-main .left .profilo a img{
+main .left .profilo .download a {
+  opacity: 0.6;
+  height: 30px;
+}
+
+main .left .profilo .download a img{
   height: 20px;
 }
+
+main .left .profilo .download:hover a{
+  opacity: 1;
+}
+
+main .left .profilo .utente img{
+  width: 28px;
+}
+
+
 
 /* MAIN RIGHT */
 
@@ -160,6 +180,8 @@ main nav .active:before{
   margin-left: -15px;
 }
 
+/* FOOTER */
+
 footer{
   width: 100%;
   height: 90px;
@@ -167,4 +189,15 @@ footer{
   position: fixed;
   bottom:0;
   background-color: #282828;
+}
+
+footer .row{height:100%;}
+
+/* MEDIA QUERY */
+
+@media all  and (max-height: 512px){
+  main .left .recenti{
+    display: none;
+  }
+
 }

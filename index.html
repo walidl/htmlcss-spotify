@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -13,13 +14,13 @@
 
         <!-- MAIN LEFT -->
 
-        <div class="left d-flex flex-column flex-wrap py-4  justify-content-between">
+        <div class="left d-flex flex-column flex-wrap py-3  justify-content-between flex-nowrap">
           <div class="top d-flex flex-column">
 
             <!-- menu -->
 
             <menu class="mb-4">
-              <img class="logo mb-4" src="img/logo.svg">
+              <img class="logo mb-4 mt-2" src="img/logo.svg">
               <div class="item my-1">
                 <a href="">
                   <img src="img/search.svg">
@@ -59,10 +60,16 @@
           <!-- profilo -->
 
           <div class="profilo px-4">
-            <a  class="d-flex align-content-center" href="">
-              <img src="img/download.svg">
-              <span>Install App</span>
-            </a>
+            <div class="download d-flex align-items-center mb-3">
+              <a href="">
+                <img class="pr-2" src="img/download.svg">
+                <span>Install App</span>
+              </a>
+            </div>
+            <div class="utente d-flex align-items-center">
+              <img class="mr-2" src="img/profile.svg">
+              <span><strong>w.lafdili</strong></span>
+            </div>
           </div>
         </div>
 
@@ -108,15 +115,15 @@
       <!-- FOOTER -->
 
       <footer class="d-flex">
-        <div class="container-fluid align-content-center flex-wrap">
+        <div class="container-fluid">
           <div class="row d-flex justify-content-between">
-            <div class="col">
+            <div class="col d-flex align-items-center">
+              <span>casa</span>
+            </div>
+            <div class="col d-flex align-items-center">
               casa
             </div>
-            <div class="col">
-              casa
-            </div>
-            <div class="col">
+            <div class="col d-flex align-items-center">
               casa
             </div>
 
