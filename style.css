@@ -191,9 +191,37 @@ footer{
   background-color: #282828;
 }
 
-footer .row{height:100%;}
+footer .row{
+  height:100%;
+}
 
-/* MEDIA QUERY */
+footer .row .left img{
+  width: 56px;
+}
+
+footer .row .left .tit{
+  font-size: 12px;
+}
+
+footer .row .left .sub-tit a{
+  font-size: 10px;
+  opacity: .6;
+}
+
+footer .row .left a:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+
+footer .row .left .heart{
+  font-size: 14px;
+  opacity: .6;
+}
+footer .row .left .heart:hover{  
+  opacity: 1;
+}
+
+/* MEDIA QUERY............................ */
 
 @media all  and (max-height: 512px){
   main .left .recenti{
