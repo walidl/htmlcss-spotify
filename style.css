@@ -189,6 +189,7 @@ footer{
   position: fixed;
   bottom:0;
   background-color: #282828;
+  border: 1px solid black;
 }
 
 footer .row{
@@ -217,9 +218,79 @@ footer .row .left .heart{
   font-size: 14px;
   opacity: .6;
 }
-footer .row .left .heart:hover{  
+
+footer .row .left .heart:hover{
   opacity: 1;
 }
+
+footer .row .left .heart:hover{
+  opacity: 1;
+}
+
+/* central */
+
+footer .row .central .commands .fas{
+  font-size: 14px;
+  opacity: .6;
+  cursor: pointer;
+}
+
+footer .row .central .commands .fas:hover{
+  opacity: 1;
+}
+
+footer .row .central .commands span{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.6);
+  cursor: pointer;
+}
+
+/* commands */
+
+footer .row .central .commands span:hover{
+  border-color: rgb(255,255,255);
+  transform: scale(1.1);
+}
+
+footer .row .central .commands span:hover .fas{
+  opacity: 1;
+}
+
+/* player */
+
+footer .row .play-bar span{
+  font-size: 11px;
+  opacity: .6;
+}
+
+footer .row .play-bar .slider{
+  -webkit-appearance: none;
+  width: 80%;
+  height: 3px;
+  border-radius: 5px;
+  background: grey;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+footer .row .play-bar .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+footer .row .play-bar .slider:hover {
+  opacity: 1;
+}
+
 
 /* MEDIA QUERY............................ */
 

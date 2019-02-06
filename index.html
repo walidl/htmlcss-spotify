@@ -118,21 +118,47 @@
       <footer class="d-flex">
         <div class="container-fluid">
           <div class="row d-flex justify-content-between">
-            <div class=" left col d-flex align-items-center">
+
+          <!-- left -->
+
+            <div class=" left col-3  d-flex align-items-center">
               <img class="mr-3" src="img/player_left.jpg">
-              <div class="mr-4">
-                <a  class="tit"href="">Clark Griswold</a>
+              <div class="mr-4  flex-column d-flex justify-content-center flex-wrap">
+                <a class="tit"href="">Clark Griswold</a>
                 <div class="sub-tit">
                   <a href="">Hilltop Hoods</a>, <a href="">Adrian Eagle</a>
                 </div>
               </div>
               <a class="heart" href=""><i class="far fa-heart"></i></a>
             </div>
-            <div class="center left col d-flex align-items-center">
-              casa
+
+            <!-- central -->
+
+            <div class="central col-6 d-flex align-items-center align-content-center justify-content-center flex-wrap">
+
+              <!-- ...commands -->
+
+              <div class="commands d-flex col-7 justify-content-around align-items-center mb-3">
+                <i class="fas fa-random"></i>
+                <i class="fas fa-step-backward"></i>
+                <span class="d-flex align-items-center justify-content-center">
+                  <i class="fas fa-pause"></i>
+                </span>
+                <i class="fas fa-step-forward"></i>
+                <i class="fas fa-redo-alt"></i>
+              </div>
+
+              <!-- ...play bar -->
+
+              <div class="play-bar d-flex col-12 justify-content-around align-items-center">
+                <span>2:38</span><input class="slider" type="range"><span>3:28</span>
+              </div>
             </div>
-            <div class="right col d-flex align-items-center">
-              casa
+
+            <!-- right -->
+
+            <div class="right col-3 d-flex justify-content-end align-items-center">
+              ciao
             </div>
           </div>
 
