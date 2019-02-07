@@ -391,6 +391,16 @@ footer .row .slider:hover {
 
 /* left */
 
+footer .row .right .vol{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .row .right .vol .fa-volume-up{
+  margin-right: 5px;
+}
+
 footer .row .right .slider{
   width: 85px;
   transition: width 0.5s ease;
@@ -493,13 +503,13 @@ footer .row .right .fas:hover{
     width: 60%;
   }
 }
+  
 
 @media all  and (max-width: 575px){
   main .right section h1{
     font-size: 24px;
     font-weight: 600;
   }
-
 
   footer .row .central{
     width: 100%;
@@ -520,6 +530,7 @@ footer .row .right .fas:hover{
 }
 
 @media all  and (max-width: 361px){
+
   footer .row .right, footer .row .left{
     display: none!important;
   }
