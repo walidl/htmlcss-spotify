@@ -217,6 +217,9 @@ main .right section h1{
   font-weight: 700;
 }
 
+main .right section .item >*{
+  cursor: pointer;
+}
 main .right section .item .image{
   position: relative;
 }
@@ -492,6 +495,11 @@ footer .row .right .fas:hover{
 }
 
 @media all  and (max-width: 575px){
+  main .right section h1{
+    font-size: 24px;
+    font-weight: 600;
+  }
+
 
   footer .row .central{
     width: 100%;
@@ -511,8 +519,15 @@ footer .row .right .fas:hover{
 
 }
 
-@media all  and (max-height: 512px){
+@media all  and (max-width: 361px){
+  footer .row .right, footer .row .left{
+    display: none!important;
+  }
 
+}
+
+@media all  and (max-height: 512px){
+  
   main .left .recenti{
     display: none;
   }
