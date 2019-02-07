@@ -4,10 +4,12 @@
   padding:0;
   font-family: 'Montserrat', sans-serif;
 }
+
 body{
   background-image: linear-gradient(to right bottom, rgb(150, 137, 3), rgb(0, 0, 0)), linear-gradient(transparent, rgb(0, 0, 0) 70%);
   background-attachment: fixed;
 }
+
 a{
   color: inherit;
   text-decoration: none;
@@ -30,16 +32,17 @@ ul{
 .app *{
   transition: opacity 0.5s ease;
 }
+
 main{
   width: 100%;
   height:100%;
-
 }
 
 /* MAIN LEFT */
 
 main .left{
   width: 230px;
+  transition: width 0.3s ease;
   height: calc(100% - 90px);
   min-height: 308px;
   background-color: rgba(0,0,0,.8);
@@ -55,6 +58,7 @@ main .left menu > *{
 main .logo {
   height: 40px;
 }
+
 main .logo.small {
   display: none;
   height: 32px;
@@ -114,7 +118,6 @@ main .left .recenti a:hover span{
 
 main .left .profilo .download{
   border-bottom: 1px solid rgba(255,255,255,.4);
-
 }
 
 main .left .profilo .download a {
@@ -140,6 +143,7 @@ main .right{
   width: 100%;
   height: 100% ;
   padding-left: 230px;
+  transition: padding-left 0.3s ease;
   padding-bottom: 90px;
 }
 
@@ -150,9 +154,11 @@ main .right nav{
   line-height: 20px;
   text-align: center;
 }
+
 main .right .menu{
   display: inline-block;
 }
+
 main .right  nav .menu .hamburger{
   display: none;
   font-size: 30px;
@@ -203,6 +209,7 @@ main nav .active:before{
 
 main .right > section{
   margin-bottom: 50px;
+  text-align: center
 }
 
 main .right section h1{
@@ -213,6 +220,7 @@ main .right section h1{
 main .right section .item .image{
   position: relative;
 }
+
 main .right section .item .image img{
   box-shadow: 0 0 10px rgba(0,0,0,.3);
 }
@@ -228,6 +236,7 @@ main .right section .item .overlay{
   height: 100%;
   background-color: rgba(0,0,0,0.6);
 }
+
 main .right section .item:hover .overlay{
   opacity: 1;
 }
@@ -343,10 +352,10 @@ footer .row .central .commands span:hover .fas{
 footer .row .right{
   width: 202px;
 }
+
 footer .row .play-bar span{
   font-size: 11px;
   opacity: .6;
-
 }
 
 footer .row .slider{
@@ -418,6 +427,7 @@ footer .row .right .fas:hover{
   }
 
   /* nav */
+
   main .right nav{
     text-align: left;
   }
@@ -425,7 +435,8 @@ footer .row .right .fas:hover{
   main .right  nav ul{
     flex-direction: column;
   }
- main .right .list{
+
+  main .right .list{
 
    opacity: 0;
    position: absolute;
@@ -437,7 +448,6 @@ footer .row .right .fas:hover{
 
   main .right  nav .menu .hamburger{
     display: inline-block;
-
   }
 
   main .right  nav .menu:hover .list{
@@ -447,6 +457,7 @@ footer .row .right .fas:hover{
 }
 
 @media all  and (max-width: 720px){
+
   main .left{
     width: 80px;
   }
