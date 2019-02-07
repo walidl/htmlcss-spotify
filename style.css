@@ -4,7 +4,10 @@
   padding:0;
   font-family: 'Montserrat', sans-serif;
 }
-
+body{
+  background-image: linear-gradient(to right bottom, rgb(150, 137, 3), rgb(0, 0, 0)), linear-gradient(transparent, rgb(0, 0, 0) 70%);
+  background-attachment: fixed;
+}
 a{
   color: inherit;
   text-decoration: none;
@@ -21,13 +24,12 @@ ul{
 
 .app{
   width: 100%;
-  height: 200vh;
+  height: 100%;
 }
 
 main{
   width: 100%;
   height:100%;
-  padding-bottom: 90px;
 }
 
 /* MAIN LEFT */
@@ -46,8 +48,12 @@ main .left menu > *{
   padding-left: 24px;
 }
 
-main .logo{
+main .logo {
   height: 40px;
+}
+main .logo.small {
+  display: none;
+  height: 32px;
 }
 
 main .left menu .item.active{
@@ -105,6 +111,7 @@ main .left .profilo .download{
   border-bottom: 1px solid rgba(255,255,255,.4);
 
 }
+
 main .left .profilo .download a {
   opacity: 0.6;
   height: 30px;
@@ -126,10 +133,9 @@ main .left .profilo .utente img{
 
 main .right{
   width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to right bottom, rgb(150, 137, 3), rgb(0, 0, 0)), linear-gradient(transparent, rgb(0, 0, 0) 70%);
+  height: 100% ;
   padding-left: 230px;
-  /* padding-bottom: 90px; */
+  padding-bottom: 90px;
   text-align: center;
 }
 
@@ -198,6 +204,7 @@ main .right section .item .image{
 main .right section .item .image img{
   box-shadow: 0 0 10px rgba(0,0,0,.3);
 }
+
 main .right section .item .image.round  > *{
   border-radius: 50%;
 }
@@ -248,20 +255,29 @@ footer .row{
   height:100%;
 }
 
+
 footer .row .left img{
   width: 56px;
+  transition: width 0.5s ease;
 }
 
-footer .row .left .tit{
+footer .row .left .info .tit{
   font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-footer .row .left .sub-tit a{
+footer .row .left .info .sub-tit a{
   font-size: 10px;
   opacity: .6;
+  /* text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  min-width: 139px */
 }
 
-footer .row .left a:hover{
+footer .row .left .info a:hover{
   opacity: 1;
   text-decoration: underline;
 }
@@ -275,11 +291,15 @@ footer .row .left .heart:hover{
   opacity: 1;
 }
 
-footer .row .left .heart:hover{
-  opacity: 1;
-}
-
 /* central *//* commands */
+
+footer .row .central{
+  width: 40%;
+  transition: width .5s ease;
+}
+footer .row .central .commands{
+  width: 295px;
+}
 
 footer .row .central .commands .fas{
   font-size: 14px;
@@ -310,10 +330,13 @@ footer .row .central .commands span:hover .fas{
 }
 
 /* player */
-
+footer .row .right{
+  width: 202px;
+}
 footer .row .play-bar span{
   font-size: 11px;
   opacity: .6;
+
 }
 
 footer .row .slider{
@@ -325,7 +348,8 @@ footer .row .slider{
 }
 
 footer .row .central .slider{
-  width: 80%;
+  width: 85%;
+  min-width: 202px;
 }
 
 footer .row .slider::-webkit-slider-thumb {
@@ -347,6 +371,7 @@ footer .row .slider:hover {
 
 footer .row .right .slider{
   width: 85px;
+  transition: width 0.5s ease;
 }
 
 footer .row .right .fas{
@@ -362,8 +387,78 @@ footer .row .right .fas:hover{
 
 
 /* MEDIA QUERY............................ */
+@media all  and (max-width: 850px){
+
+  footer .row .left .info{
+    display: none!important;
+  }
+
+  footer .row .central{
+    width: 50%;
+  }
+}
+@media all  and (max-width: 720px){
+  main .left{
+    width: 80px;
+  }
+
+  main .logo.small {
+    display: inline-block;
+  }
+
+  main .logo.large {
+    display: none;
+  }
+
+  main .left .top menu .item  span{
+    display: none;
+  }
+
+  main .left .recenti{
+    display: none;
+  }
+
+  main .left .profilo .download span, main .left .profilo .utente span{
+    display: none;
+  }
+
+  main .right{
+    padding-left: 80px;
+  }
+
+  footer .row .right{
+    width: 100px;
+  }
+
+  footer .row .right input{
+    display: none;
+  }
+
+  footer .row .central{
+    width: 60%;
+  }
+}
+
+@media all  and (max-width: 575px){
+
+  footer .row .central{
+    width: 100%;
+  }
+
+  footer .row .left > img {
+    width: 30px;
+  }
+
+  footer .row .left img:hover {
+    width: 40px;
+  }
+
+
+}
+
 
 @media all  and (max-height: 512px){
+
   main .left .recenti{
     display: none;
   }
