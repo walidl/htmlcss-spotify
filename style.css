@@ -27,6 +27,9 @@ ul{
   height: 100%;
 }
 
+.app *{
+  transition: opacity 0.5s ease;
+}
 main{
   width: 100%;
   height:100%;
@@ -91,14 +94,15 @@ main .left .recenti {
   padding-left: 24px;
 }
 
-main .left .recenti *{
-  opacity: 0.6;
-}
-
 main .left .recenti h3{
   font-size: 11px;
   font-weight: normal;
   letter-spacing: 1px ;
+  opacity: 0.6;
+}
+
+main .left .recenti a span{
+  opacity: 0.6;
 }
 
 main .left .recenti a:hover span{
@@ -210,14 +214,14 @@ main .right section .item .image.round  > *{
 }
 
 main .right section .item .overlay{
-  visibility: hidden;
+  opacity: 0;
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.4)
+  background-color: rgba(0,0,0,0.6);
 }
 main .right section .item:hover .overlay{
-  visibility: visible;
+  opacity: 1;
 }
 
 main .right section .item .overlay span{
@@ -271,10 +275,6 @@ footer .row .left .info .tit{
 footer .row .left .info .sub-tit a{
   font-size: 10px;
   opacity: .6;
-  /* text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  min-width: 139px */
 }
 
 footer .row .left .info a:hover{
@@ -297,6 +297,7 @@ footer .row .central{
   width: 40%;
   transition: width .5s ease;
 }
+
 footer .row .central .commands{
   width: 295px;
 }
@@ -317,8 +318,8 @@ footer .row .central .commands span{
   border-radius: 50%;
   border: 1px solid rgba(255,255,255,0.6);
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
-
 
 footer .row .central .commands span:hover{
   border-color: rgb(255,255,255);
@@ -330,6 +331,7 @@ footer .row .central .commands span:hover .fas{
 }
 
 /* player */
+
 footer .row .right{
   width: 202px;
 }
@@ -384,19 +386,30 @@ footer .row .right .fas:hover{
   opacity: 1;
 }
 
-
-
 /* MEDIA QUERY............................ */
+
+
 @media all  and (max-width: 850px){
 
   footer .row .left .info{
-    display: none!important;
+    position: absolute;
+    left: 5px;
+    transition: bottom 0.5s ease;
+    bottom: -60px;
+    background-color: rgba(0,0,0,.9);
+    padding:5px;
+    border-radius: 5px;
+  }
+
+  footer .row .left:hover .info{
+    bottom: 90px;
   }
 
   footer .row .central{
     width: 50%;
   }
 }
+
 @media all  and (max-width: 720px){
   main .left{
     width: 80px;
@@ -406,19 +419,11 @@ footer .row .right .fas:hover{
     display: inline-block;
   }
 
-  main .logo.large {
-    display: none;
-  }
-
-  main .left .top menu .item  span{
-    display: none;
-  }
-
-  main .left .recenti{
-    display: none;
-  }
-
-  main .left .profilo .download span, main .left .profilo .utente span{
+  main .logo.large,
+  main .left .top menu .item  span,
+  main .left .recenti,
+  main .left .profilo .download span,
+  main .left .profilo .utente span {
     display: none;
   }
 
@@ -449,13 +454,15 @@ footer .row .right .fas:hover{
     width: 30px;
   }
 
-  footer .row .left img:hover {
+  footer .row .left:hover img{
     width: 40px;
   }
 
+  footer .row .right{
+    width: 10%;
+  }
 
 }
-
 
 @media all  and (max-height: 512px){
 
