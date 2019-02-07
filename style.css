@@ -527,7 +527,7 @@ footer .row .right .fas:hover{
 }
 
 @media all  and (max-height: 512px){
-  
+
   main .left .recenti{
     display: none;
   }
