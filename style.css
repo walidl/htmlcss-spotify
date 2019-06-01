@@ -502,8 +502,7 @@ footer .row .right .fas:hover{
   footer .row .central{
     width: 60%;
   }
-}
-  
+}  
 
 @media all  and (max-width: 575px){
   main .right section h1{
